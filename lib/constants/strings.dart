@@ -1,0 +1,1 @@
+const String WORDZ_TITLE_STRING = "WordZ";
