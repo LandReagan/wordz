@@ -26,6 +26,11 @@ dependencies:
 
   test: ^1.5.1+1
 
+  # Firebase stuff
+  google_sign_in: ^4.0.14
+  firebase_auth: ^0.15.0+1
+  cloud_firestore: ^0.12.10+2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

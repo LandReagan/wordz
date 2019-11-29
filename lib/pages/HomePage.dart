@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    _database.writeFirestoreTest();
     return Scaffold(
       appBar: AppBar(
         title: Text(WORDZ_TITLE_STRING),

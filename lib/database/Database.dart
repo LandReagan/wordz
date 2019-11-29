@@ -1,6 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:wordz/objects/FamilyRole.dart';
 import 'package:wordz/tests/dummies.dart';
-
 import 'package:wordz/objects/Family.dart';
 
 /// Interface for Firestore
@@ -11,4 +12,9 @@ class Database {
   }
 
   FAMILY_ROLE get userRole => FAMILY_ROLE.PARENT;
+
+  // Tests
+  void writeFirestoreTest(){
+    Firestore.instance.collection("family").document().setData({'donnée': 36});
+  }
 }
