@@ -10,6 +10,7 @@ class Family {
   void addMember(FamilyMember member) => _members.add(member);
 
   List<FamilyMember> get members => _members;
+  String get name => _name;
 
   @override
   String toString() {

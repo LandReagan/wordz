@@ -4,10 +4,24 @@ The wordZ counter!
 
 ## Database structure
 
-``
+<pre>
 (root)
 |
-+- users
++- "users" (coll)
 |
-+ - families
-```
++- "families" (coll)
+    |
+    +- (UID)
+        |
+        +- "name" (string)
+        |
+        +- "members" (coll)
+            |
+            + (UID)
+                |
+                +- "name" (string)
+                |
+                +- "role" ("PARENT" or "KID")
+                |
+                +- "counter" (int)
+</pre>

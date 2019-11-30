@@ -14,7 +14,19 @@ class Database {
   FAMILY_ROLE get userRole => FAMILY_ROLE.PARENT;
 
   // Tests
-  void writeFirestoreTest(){
-    Firestore.instance.collection("family").document().setData({'donnée': 36});
+
+  void writeDummyFamily(Family dummyFamily) async {
+    CollectionReference families = Firestore.instance.collection('families');
+    await families.document('tribugagne').setData({
+      'name': dummyFamily.name,
+      
+    });
+  }
+
+  void writeFirestoreTest() async {
+    await Firestore.instance
+        .collection("family")
+        .document()
+        .setData({'donnée': 36});
   }
 }
